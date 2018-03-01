@@ -3,7 +3,7 @@ const Telegraf = require('telegraf');
 const Markup = require('telegraf/markup');
 const fs = require('fs');
 
-const bot = new Telegraf(Token);
+const bot = new Telegraf(Token,{ polling: true });
 
 // bot.use(Telegraf.log());
 
