@@ -1,5 +1,4 @@
-const Token = '516577502:AAFlhy1ikHmfZdeaeq0CVeB_lms8QDBLCIQ';
-
+const Token = '516577502:AAGeypLQPLZeLWSUzZQwJc8Q_ZPbdpvgsgI';
 const Telegraf = require('telegraf');
 const Markup = require('telegraf/markup');
 const fs = require('fs');
