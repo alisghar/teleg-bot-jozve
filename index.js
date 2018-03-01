@@ -8,7 +8,6 @@ const URL = 'https://teleg-bot-jozve.herokuapp.com/';
 
 const bot = new Telegraf(Token);
 bot.telegram.setWebhook(`${URL}/bot${Token}`);
-bot.startWebhook(`/bot${Token}`, null, PORT);
 
 // bot.use(Telegraf.log());
 
@@ -59,3 +58,4 @@ bot.hears('📒 Chapter 01', (ctx) => {
 });
 
 // bot.startPolling();
+bot.startWebhook(`/bot${Token}`, null, PORT);
