@@ -3,11 +3,7 @@ const Telegraf = require('telegraf');
 const Markup = require('telegraf/markup');
 const fs = require('fs');
 
-const PORT = 3000;
-const URL = 'https://teleg-bot-jozve.herokuapp.com/';
-
 const bot = new Telegraf(Token);
-bot.telegram.setWebhook(`${URL}/bot${Token}`);
 
 // bot.use(Telegraf.log());
 
@@ -57,5 +53,4 @@ bot.hears('📒 Chapter 01', (ctx) => {
     ctx.replyWithDocument({ source: './chapters/chapter1.pdf' });
 });
 
-// bot.startPolling();
-bot.startWebhook(`/bot${Token}`, null, PORT);
+bot.startPolling();
