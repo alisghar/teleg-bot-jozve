@@ -4,7 +4,6 @@ const Markup = require('telegraf/markup');
 const fs = require('fs');
 
 const bot = new Telegraf(Token);
-bot.startPolling();
 
 // bot.use(Telegraf.log());
 
@@ -53,3 +52,5 @@ bot.hears('📒 Chapter 01', (ctx) => {
     ctx.reply('اندکی صبر کنید٬ فایل مورد نظر برای شما ارسال خواهد شد 😊');
     ctx.replyWithDocument({ source: './chapters/chapter1.pdf' });
 });
+
+bot.startPolling();
