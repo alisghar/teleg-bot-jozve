@@ -58,4 +58,4 @@ bot.hears('📒 Chapter 01', (ctx) => {
     ctx.replyWithDocument({ source: './chapters/chapter1.pdf' });
 });
 
-bot.startPolling();
+// bot.startPolling();
