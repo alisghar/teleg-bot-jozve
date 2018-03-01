@@ -3,9 +3,14 @@ const Telegraf = require('telegraf');
 const Markup = require('telegraf/markup');
 const fs = require('fs');
 
-const bot = new Telegraf(Token);
+const PORT = 3000;
+const URL = 'https://teleg-bot-jozve.herokuapp.com/';
 
-bot.use(Telegraf.log());
+const bot = new Telegraf(Token);
+bot.telegram.setWebhook(`${URL}/bot${Token}`);
+bot.startWebhook(`/bot${Token}`, null, PORT);
+
+// bot.use(Telegraf.log());
 
 bot.command('start', ({ reply }) => {
     return reply('👈 منوی اصلی', Markup
